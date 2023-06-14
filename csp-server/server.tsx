@@ -1,7 +1,7 @@
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { resetServerContext } from '@hello-pangea/dnd';
+import { resetServerContext } from '@websiddu/dnd';
 import { resolve } from 'path';
 import App from './app';
 import invokeOnReactVersion from '../test/util/invoke-on-react-version';

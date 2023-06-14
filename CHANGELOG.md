@@ -1,60 +1,60 @@
 
 
-## [16.2.0](https://github.com/hello-pangea/dnd/compare/v16.1.0...v16.2.0) (2022-11-27)
+## [16.2.0](https://github.com/websiddu/dnd/compare/v16.1.0...v16.2.0) (2022-11-27)
 
 
 ### Bug Fixes 🛠
 
-* **ssr:** use useId for hydration and remove the need for resetServerContext (React 18+) ([#439](https://github.com/hello-pangea/dnd/issues/439)) ([bcb66d3](https://github.com/hello-pangea/dnd/commit/bcb66d32683519fb09f6a651ec2a0f63bd90d304))
+* **ssr:** use useId for hydration and remove the need for resetServerContext (React 18+) ([#439](https://github.com/websiddu/dnd/issues/439)) ([bcb66d3](https://github.com/websiddu/dnd/commit/bcb66d32683519fb09f6a651ec2a0f63bd90d304))
 
-## [16.1.0](https://github.com/hello-pangea/dnd/compare/v16.0.1...v16.1.0) (2022-11-26)
+## [16.1.0](https://github.com/websiddu/dnd/compare/v16.0.1...v16.1.0) (2022-11-26)
 
 
 ### Features 🔥
 
-* ability to modify autoScroller config options ([#434](https://github.com/hello-pangea/dnd/issues/434)) ([8277937](https://github.com/hello-pangea/dnd/commit/82779377a4faf93a91f9cfca0a1be0bb35278ee6)), closes [#431](https://github.com/hello-pangea/dnd/issues/431)
+* ability to modify autoScroller config options ([#434](https://github.com/websiddu/dnd/issues/434)) ([8277937](https://github.com/websiddu/dnd/commit/82779377a4faf93a91f9cfca0a1be0bb35278ee6)), closes [#431](https://github.com/websiddu/dnd/issues/431)
 
-## [16.0.1](https://github.com/hello-pangea/dnd/compare/v16.0.0...v16.0.1) (2022-10-14)
+## [16.0.1](https://github.com/websiddu/dnd/compare/v16.0.0...v16.0.1) (2022-10-14)
 
 
 ### Docs 📃
 
-* clarify that grid layouts are not supported in readme ([58437ba](https://github.com/hello-pangea/dnd/commit/58437bac7bc462ebe835d612b0c143ec8ff3c435))
+* clarify that grid layouts are not supported in readme ([58437ba](https://github.com/websiddu/dnd/commit/58437bac7bc462ebe835d612b0c143ec8ff3c435))
 
 
 ### Others 🔧
 
-* **deps:** update babel libraries ([#428](https://github.com/hello-pangea/dnd/issues/428)) ([19cdc08](https://github.com/hello-pangea/dnd/commit/19cdc08c78fc243b5a64e59b4b94d2872baeed35))
-* **deps:** update react-redux to v8.0.4 ([#427](https://github.com/hello-pangea/dnd/issues/427)) ([3b9ee6a](https://github.com/hello-pangea/dnd/commit/3b9ee6a856d8551a60bd0a34501c84d63e55c632))
-* **deps:** update use-memo-one to v1.1.3 ([#426](https://github.com/hello-pangea/dnd/issues/426)) ([4239e6e](https://github.com/hello-pangea/dnd/commit/4239e6eb2d67ab6b30995630a7baa9e81e72885f))
-* **dev-deps:** jest 28 -> 29 and jsdom 19 -> 20 ([b9946f4](https://github.com/hello-pangea/dnd/commit/b9946f472d4b5162c63b145fdf0a11ae0d29190d))
-* **dev-deps:** remove @types/enzyme and unused emotion-theming ([f3ab174](https://github.com/hello-pangea/dnd/commit/f3ab174579181206e319ec776d9d34c8b50a113a))
-* **dev-deps:** remove @types/jest ([1b5c83a](https://github.com/hello-pangea/dnd/commit/1b5c83a5cdb440a2281b4ecc90ee306b0bf02e59))
-* **dev-deps:** typescript 4.7 -> 4.8 ([cc5f954](https://github.com/hello-pangea/dnd/commit/cc5f954e6e8d1782cf849e76c582663a99abe6e1))
-* **dev-deps:** update minor dev deps ([e01d879](https://github.com/hello-pangea/dnd/commit/e01d879369cc63c30568290bd0d4ff5c898be1fa))
+* **deps:** update babel libraries ([#428](https://github.com/websiddu/dnd/issues/428)) ([19cdc08](https://github.com/websiddu/dnd/commit/19cdc08c78fc243b5a64e59b4b94d2872baeed35))
+* **deps:** update react-redux to v8.0.4 ([#427](https://github.com/websiddu/dnd/issues/427)) ([3b9ee6a](https://github.com/websiddu/dnd/commit/3b9ee6a856d8551a60bd0a34501c84d63e55c632))
+* **deps:** update use-memo-one to v1.1.3 ([#426](https://github.com/websiddu/dnd/issues/426)) ([4239e6e](https://github.com/websiddu/dnd/commit/4239e6eb2d67ab6b30995630a7baa9e81e72885f))
+* **dev-deps:** jest 28 -> 29 and jsdom 19 -> 20 ([b9946f4](https://github.com/websiddu/dnd/commit/b9946f472d4b5162c63b145fdf0a11ae0d29190d))
+* **dev-deps:** remove @types/enzyme and unused emotion-theming ([f3ab174](https://github.com/websiddu/dnd/commit/f3ab174579181206e319ec776d9d34c8b50a113a))
+* **dev-deps:** remove @types/jest ([1b5c83a](https://github.com/websiddu/dnd/commit/1b5c83a5cdb440a2281b4ecc90ee306b0bf02e59))
+* **dev-deps:** typescript 4.7 -> 4.8 ([cc5f954](https://github.com/websiddu/dnd/commit/cc5f954e6e8d1782cf849e76c582663a99abe6e1))
+* **dev-deps:** update minor dev deps ([e01d879](https://github.com/websiddu/dnd/commit/e01d879369cc63c30568290bd0d4ff5c898be1fa))
 
-## [16.0.0](https://github.com/hello-pangea/dnd/compare/v15.0.0...v16.0.0) (2022-08-25)
+## [16.0.0](https://github.com/websiddu/dnd/compare/v15.0.0...v16.0.0) (2022-08-25)
 
 
 ### ⚠ BREAKING CHANGES
 
 * **rename:** The project has a new home! From react-forked organization to
-hello-pangea. You should install @hello-pangea/dnd package instead.
+websiddu. You should install @websiddu/dnd package instead.
 
 ### Docs 📃
 
-* **community:** add discord badge ([ac03141](https://github.com/hello-pangea/dnd/commit/ac03141e28a9c6a78638b73caeced162651094c6))
+* **community:** add discord badge ([ac03141](https://github.com/websiddu/dnd/commit/ac03141e28a9c6a78638b73caeced162651094c6))
 
 
 ### Code Refactoring 🖌
 
-* **rename:** project from @react-forked/dnd to @hello-pangea/dnd ([146b204](https://github.com/hello-pangea/dnd/commit/146b204161ca0de8ef7f966f9e2015c1f766a403))
+* **rename:** project from @react-forked/dnd to @websiddu/dnd ([146b204](https://github.com/websiddu/dnd/commit/146b204161ca0de8ef7f966f9e2015c1f766a403))
 
 
 ### Others 🔧
 
-* **netlify:** stop using the service to deploy our storybook website ([#412](https://github.com/hello-pangea/dnd/issues/412)) ([48eb4a7](https://github.com/hello-pangea/dnd/commit/48eb4a73b5997e05d824879b0ea696e15f76a2aa))
-* update maintainers section to add Reece Carolan (@Xhale1) ([9a22333](https://github.com/hello-pangea/dnd/commit/9a22333792875f5e1cd197b313f71488819c7778))
+* **netlify:** stop using the service to deploy our storybook website ([#412](https://github.com/websiddu/dnd/issues/412)) ([48eb4a7](https://github.com/websiddu/dnd/commit/48eb4a73b5997e05d824879b0ea696e15f76a2aa))
+* update maintainers section to add Reece Carolan (@Xhale1) ([9a22333](https://github.com/websiddu/dnd/commit/9a22333792875f5e1cd197b313f71488819c7778))
 
 ## [15.0.0](https://github.com/react-forked/dnd/compare/v14.0.2...v15.0.0) (2022-08-22)
 

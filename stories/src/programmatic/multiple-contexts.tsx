@@ -9,8 +9,8 @@ import type {
   SnapDragActions,
   Sensor,
   SensorAPI,
-} from '@hello-pangea/dnd';
-import { DragDropContext } from '@hello-pangea/dnd';
+} from '@websiddu/dnd';
+import { DragDropContext } from '@websiddu/dnd';
 import type { Quote } from '../types';
 import { quotes as initial } from '../data';
 import QuoteList from '../primatives/quote-list';

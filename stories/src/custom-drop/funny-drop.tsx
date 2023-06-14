@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
+import { DragDropContext, Draggable, Droppable } from '@websiddu/dnd';
 import type {
   DroppableProvided,
   DraggableProvided,
@@ -10,7 +10,7 @@ import type {
   NotDraggingStyle,
   DropAnimation,
   DropResult,
-} from '@hello-pangea/dnd';
+} from '@websiddu/dnd';
 import { grid } from '../constants';
 import reorder from '../reorder';
 

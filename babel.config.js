@@ -18,7 +18,7 @@ module.exports = (api) => {
         'babel-plugin-module-resolver',
         {
           alias: {
-            '@hello-pangea/dnd':
+            '@websiddu/dnd':
               process.env.USE_PRODUCTION_BUILD === 'true'
                 ? path.resolve(__dirname, './dist/dnd.esm')
                 : path.resolve(__dirname, './src/index.ts'),

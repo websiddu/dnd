@@ -4,7 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@hello-pangea/dnd": ["../src/index.ts"]
+      "@websiddu/dnd": ["../src/index.ts"]
     }
   },
 }

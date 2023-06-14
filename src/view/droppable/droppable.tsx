@@ -22,6 +22,12 @@ import AnimateInOut from '../animate-in-out/animate-in-out';
 import type { AnimateProvided } from '../animate-in-out/animate-in-out';
 import { PrivateDraggable } from '../draggable/draggable-api';
 
+
+function getBody(): HTMLElement {
+  invariant(document.body, 'document.body is not ready');
+  return document.body;
+}
+
 const Droppable: FunctionComponent<Props> = (props) => {
   const appContext: AppContextValue | null = useContext<AppContextValue | null>(
     AppContext,
@@ -35,12 +41,12 @@ const Droppable: FunctionComponent<Props> = (props) => {
     // own props
     children,
     droppableId,
-    type,
-    mode,
-    direction,
-    ignoreContainerClipping,
-    isDropDisabled,
-    isCombineEnabled,
+    type = "DEFAULT",
+    mode = "standard",
+    direction = "vertical",
+    ignoreContainerClipping = false,
+    isDropDisabled = false,
+    isCombineEnabled = false,
     // map props
     snapshot,
     useClone,
@@ -48,7 +54,7 @@ const Droppable: FunctionComponent<Props> = (props) => {
     updateViewportMaxScroll,
 
     // clone (ownProps)
-    getContainerForClone,
+    getContainerForClone = getBody,
   } = props;
 
   const getDroppableRef = useCallback(

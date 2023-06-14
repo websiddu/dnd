@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
-import { DragDropContext } from '@hello-pangea/dnd';
-import type { DropResult } from '@hello-pangea/dnd';
+import { DragDropContext } from '@websiddu/dnd';
+import type { DropResult } from '@websiddu/dnd';
 import { quotes as initial } from '../data';
 import type { Quote } from '../types';
 import QuoteList from '../primatives/quote-list';
