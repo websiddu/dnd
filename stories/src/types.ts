@@ -1,4 +1,4 @@
-import type { DraggableId, DraggableLocation } from '@websiddu/dnd';
+import type { DraggableId, DraggableLocation } from '@gsid/dnd';
 
 export type Id = string;
 

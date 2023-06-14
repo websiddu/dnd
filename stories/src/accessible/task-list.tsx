@@ -1,8 +1,8 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { Droppable } from '@websiddu/dnd';
-import type { DroppableProvided } from '@websiddu/dnd';
+import { Droppable } from '@gsid/dnd';
+import type { DroppableProvided } from '@gsid/dnd';
 import Task from './task';
 import type { Task as TaskType } from '../types';
 import { grid, borderRadius } from '../constants';

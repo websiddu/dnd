@@ -2,13 +2,13 @@ import type { Property } from 'csstype';
 import React, { Component, Fragment, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { DragDropContext, Droppable, Draggable } from '@websiddu/dnd';
+import { DragDropContext, Droppable, Draggable } from '@gsid/dnd';
 import type {
   DropResult,
   DroppableProvided,
   DraggableProvided,
   DraggableStateSnapshot,
-} from '@websiddu/dnd';
+} from '@gsid/dnd';
 import reorder from '../reorder';
 import { grid } from '../constants';
 import type { Quote } from '../types';

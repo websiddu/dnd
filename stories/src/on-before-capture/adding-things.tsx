@@ -1,8 +1,8 @@
 import React, { ReactElement, useState } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { DragDropContext, Droppable, Draggable } from '@websiddu/dnd';
-import type { DropResult } from '@websiddu/dnd';
+import { DragDropContext, Droppable, Draggable } from '@gsid/dnd';
+import type { DropResult } from '@gsid/dnd';
 import type { Task } from '../types';
 import { grid } from '../constants';
 import reorder, { moveBetween } from '../reorder';

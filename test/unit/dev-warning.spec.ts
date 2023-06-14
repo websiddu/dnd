@@ -17,7 +17,7 @@ it('should log a warning to the console', () => {
 });
 
 it('should not log a warning if warnings are disabled', () => {
-  window['__@websiddu/dnd-disable-dev-warnings'] = true;
+  window['__@gsid/dnd-disable-dev-warnings'] = true;
 
   warning('hey');
   warning('sup');
@@ -27,7 +27,7 @@ it('should not log a warning if warnings are disabled', () => {
 
   // re-enable
 
-  window['__@websiddu/dnd-disable-dev-warnings'] = false;
+  window['__@gsid/dnd-disable-dev-warnings'] = false;
 
   warning('hey');
 

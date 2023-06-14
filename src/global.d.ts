@@ -13,7 +13,7 @@ interface Process {
 declare const process: Process;
 
 declare interface Window {
-  '__@websiddu/dnd-disable-dev-warnings'?: boolean;
+  '__@gsid/dnd-disable-dev-warnings'?: boolean;
 }
 
 // From the test folder we explicitly set typescript to load node.

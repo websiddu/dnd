@@ -1,4 +1,4 @@
-import type { DraggableLocation } from '@websiddu/dnd';
+import type { DraggableLocation } from '@gsid/dnd';
 import type { Quote, QuoteMap } from './types';
 
 // a little function to help us with reordering the result

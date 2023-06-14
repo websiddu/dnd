@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import type { DraggableProvided } from '@websiddu/dnd';
+import type { DraggableProvided } from '@gsid/dnd';
 import { borderRadius, grid } from '../constants';
 import type { Quote, AuthorColors } from '../types';
 

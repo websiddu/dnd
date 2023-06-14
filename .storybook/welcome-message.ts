@@ -25,7 +25,7 @@ function welcomeMessage(): void {
   );
 
   consoleTable([
-    ['@websiddu/dnd version', version],
+    ['@gsid/dnd version', version],
     ['react version', React.version],
     ['process.env.NODE_ENV', process.env.NODE_ENV],
   ]);

@@ -1,8 +1,8 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { DragDropContext } from '@websiddu/dnd';
-import type { DropResult, DraggableLocation } from '@websiddu/dnd';
+import { DragDropContext } from '@gsid/dnd';
+import type { DropResult, DraggableLocation } from '@gsid/dnd';
 import QuoteList from '../primatives/quote-list';
 import { grid } from '../constants';
 import { reorderQuoteMap } from '../reorder';

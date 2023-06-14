@@ -1,11 +1,11 @@
 import React, { ReactElement, useState } from 'react';
 import styled from '@emotion/styled';
-import { DragDropContext, Droppable, Draggable } from '@websiddu/dnd';
+import { DragDropContext, Droppable, Draggable } from '@gsid/dnd';
 import type {
   DropResult,
   DraggableProvided,
   DroppableProvided,
-} from '@websiddu/dnd';
+} from '@gsid/dnd';
 import type { Quote as QuoteType } from '../types';
 import { quotes as initial } from '../data';
 import reorder from '../reorder';

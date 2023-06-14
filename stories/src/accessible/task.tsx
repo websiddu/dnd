@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom';
 import memoizeOne from 'memoize-one';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { Draggable } from '@websiddu/dnd';
-import type {
-  DraggableProvided,
-  DraggableStateSnapshot,
-} from '@websiddu/dnd';
+import { Draggable } from '@gsid/dnd';
+import type { DraggableProvided, DraggableStateSnapshot } from '@gsid/dnd';
 import { invariant } from '../../../src/invariant';
 import type { Task as TaskType } from '../types';
 import { grid, borderRadius } from '../constants';

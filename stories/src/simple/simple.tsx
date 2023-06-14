@@ -5,7 +5,7 @@ import {
   Draggable,
   DraggableStyle,
   DropResult,
-} from '@websiddu/dnd';
+} from '@gsid/dnd';
 
 // fake data generator
 const getItems = (count: number) =>

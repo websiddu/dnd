@@ -22,7 +22,6 @@ import AnimateInOut from '../animate-in-out/animate-in-out';
 import type { AnimateProvided } from '../animate-in-out/animate-in-out';
 import { PrivateDraggable } from '../draggable/draggable-api';
 
-
 function getBody(): HTMLElement {
   invariant(document.body, 'document.body is not ready');
   return document.body;
@@ -41,9 +40,9 @@ const Droppable: FunctionComponent<Props> = (props) => {
     // own props
     children,
     droppableId,
-    type = "DEFAULT",
-    mode = "standard",
-    direction = "vertical",
+    type = 'DEFAULT',
+    mode = 'standard',
+    direction = 'vertical',
     ignoreContainerClipping = false,
     isDropDisabled = false,
     isCombineEnabled = false,
@@ -73,7 +72,20 @@ const Droppable: FunctionComponent<Props> = (props) => {
   }, []);
 
   useValidation({
-    props,
+    props: {
+      children,
+      droppableId,
+      type,
+      mode,
+      direction,
+      ignoreContainerClipping,
+      isDropDisabled,
+      isCombineEnabled,
+      snapshot,
+      useClone,
+      updateViewportMaxScroll,
+      getContainerForClone,
+    } as any,
     getDroppableRef,
     getPlaceholderRef,
   });

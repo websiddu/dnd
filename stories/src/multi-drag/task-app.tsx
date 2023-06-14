@@ -1,11 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
-import { DragDropContext } from '@websiddu/dnd';
-import type {
-  DragStart,
-  DropResult,
-  DraggableLocation,
-} from '@websiddu/dnd';
+import { DragDropContext } from '@gsid/dnd';
+import type { DragStart, DropResult, DraggableLocation } from '@gsid/dnd';
 import initial from './data';
 import Column from './column';
 import type { Result as ReorderResult } from './utils';

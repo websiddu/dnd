@@ -13,8 +13,8 @@ import type {
   DroppableProvided,
   DroppableStateSnapshot,
   DraggableRubric,
-} from '@websiddu/dnd';
-import { DragDropContext, Droppable, Draggable } from '@websiddu/dnd';
+} from '@gsid/dnd';
+import { DragDropContext, Droppable, Draggable } from '@gsid/dnd';
 import type { QuoteMap, Quote } from '../../types';
 import Title from '../../primatives/title';
 import { reorderQuoteMap } from '../../reorder';

@@ -33,11 +33,20 @@ type OnBeforeCaptureResponder = (before: BeforeCapture) => unknown;
 
 type OnBeforeDragStartResponder = (start: DragStart) => unknown;
 
-type OnDragStartResponder = (start: DragStart, provided: ResponderProvided) => unknown;
+type OnDragStartResponder = (
+  start: DragStart,
+  provided: ResponderProvided,
+) => unknown;
 
-type OnDragUpdateResponder = (update: DragUpdate, provided: ResponderProvided) => unknown;
+type OnDragUpdateResponder = (
+  update: DragUpdate,
+  provided: ResponderProvided,
+) => unknown;
 
-type OnDragEndResponder = (result: DropResult, provided: ResponderProvided) => unknown;
+type OnDragEndResponder = (
+  result: DropResult,
+  provided: ResponderProvided,
+) => unknown;
 
 interface DraggableRubric {
   draggableId: DraggableId;
@@ -46,9 +55,8 @@ interface DraggableRubric {
 }
 
 interface DragStart extends DraggableRubric {
-    mode: MovementMode;
+  mode: MovementMode;
 }
-
 
 interface DragUpdate extends DragStart {
   // populated if in a reorder position
@@ -64,7 +72,7 @@ interface Combine {
 }
 
 interface DropResult extends DragUpdate {
-    reason: DropReason;
+  reason: DropReason;
 }
 
 type DropReason = 'DROP' | 'CANCEL';
@@ -96,7 +104,7 @@ interface SensorAPI {
 type TryGetLock = (
   draggableId: DraggableId,
   forceStop?: () => void,
-  options?: TryGetLockOptions
+  options?: TryGetLockOptions,
 ) => PreDragActions | null;
 interface TryGetLockOptions {
   sourceEvent?: Event;
@@ -201,7 +209,7 @@ interface DropAnimation {
 The types are exported as part of the module so using them is as simple as:
 
 ```js
-import type { DroppableProvided } from '@websiddu/dnd';
+import type { DroppableProvided } from '@gsid/dnd';
 ```
 
 [← Back to documentation](/README.md#documentation-)

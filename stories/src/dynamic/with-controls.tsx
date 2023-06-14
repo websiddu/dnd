@@ -2,8 +2,8 @@
 import React, { ReactElement } from 'react';
 import type { ChangeEvent } from 'react';
 import styled from '@emotion/styled';
-import { DragDropContext } from '@websiddu/dnd';
-import type { DropResult, DragUpdate } from '@websiddu/dnd';
+import { DragDropContext } from '@gsid/dnd';
+import type { DropResult, DragUpdate } from '@gsid/dnd';
 import QuoteList from '../primatives/quote-list';
 import { generateQuoteMap, authors } from '../data';
 import { reorderQuoteMap } from '../reorder';

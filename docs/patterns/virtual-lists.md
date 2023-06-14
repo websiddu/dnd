@@ -1,6 +1,6 @@
 # Virtual lists
 
-`@websiddu/dnd` supports drag and drop within and between virtual lists. This lets you have fantastic performance with very large data sets. As a general rule, you will want to start using a virtual list when your list size is more than 500 items.
+`@gsid/dnd` supports drag and drop within and between virtual lists. This lets you have fantastic performance with very large data sets. As a general rule, you will want to start using a virtual list when your list size is more than 500 items.
 
 ![virtual-board](https://user-images.githubusercontent.com/2182637/66453948-e0044d00-eab1-11e9-88db-3e5165dde69b.gif)
 
@@ -19,7 +19,7 @@ There are drawbacks with using virtual lists. They stem from the fact that with 
 
 ## Support
 
-`@websiddu/dnd` is designed to work with existing virtual list solutions and does not have it's own virtual list abstraction. There is no official "virtual list" specification or implementation for the web. Different virtual list libraries achieve windowing through various techniques. So we cannot guarentee that `@websiddu/dnd` will work with every virtual list library. We have created examples for `react-window` and `react-virtualized` which are the two most popular virtual list libraries for `react`.
+`@gsid/dnd` is designed to work with existing virtual list solutions and does not have it's own virtual list abstraction. There is no official "virtual list" specification or implementation for the web. Different virtual list libraries achieve windowing through various techniques. So we cannot guarentee that `@gsid/dnd` will work with every virtual list library. We have created examples for `react-window` and `react-virtualized` which are the two most popular virtual list libraries for `react`.
 
 ## Premade examples 🎁
 
@@ -39,13 +39,15 @@ Please raise a pull request if you would like to add examples for other virtuali
 - [List](https://dnd.hellopangea.com/?path=/story/examples-virtual-react-virtualized--window-list) with [`WindowScroller`](https://github.com/bvaughn/react-virtualized/blob/master/docs/WindowScroller.md) ([source](/stories/src/virtual/react-virtualized/window-list.jsx))
 
 ### [`react-virtuoso`](https://github.com/petyosi/react-virtuoso)
+
 React Virtuoso comes with automatic item measurement out of the box.
+
 - [List with source](https://virtuoso.dev/react-beautiful-dnd/)
 - [Basic list on `codesandbox.io`](https://codesandbox.io/s/react-virutoso-with-react-beautiful-dnd-e6vmq)
 
 ## Usage
 
-`@websiddu/dnd` does not provide its own virtual list abstraction so there is a bit of wiring that you will need to do in order to get going with existing virtual list solutions 🛠
+`@gsid/dnd` does not provide its own virtual list abstraction so there is a bit of wiring that you will need to do in order to get going with existing virtual list solutions 🛠
 
 ### Enable overscanning
 
@@ -53,7 +55,7 @@ React Virtuoso comes with automatic item measurement out of the box.
 
 Most virtual list libraries support the concept of **overscanning**. Overscanning is where a small about of non-visible items are rendered near the boundary of the window. When a scroll occurs the overscanned item can be immediately moved into view and does not need to be created. Overscanning generally leads to a more fluid experience.
 
-It is required that overscanning be enabled for `@websiddu/dnd` to work correctly. If overscanning is not enabled, `rfd` cannot tell if there are more items in the list when an item is in the last visual position. We require an overscanning value of one or more.
+It is required that overscanning be enabled for `@gsid/dnd` to work correctly. If overscanning is not enabled, `rfd` cannot tell if there are more items in the list when an item is in the last visual position. We require an overscanning value of one or more.
 
 ### Set `<Droppable /> | mode` to `virtual`
 

@@ -1,13 +1,13 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { Droppable, Draggable } from '@websiddu/dnd';
+import { Droppable, Draggable } from '@gsid/dnd';
 import type {
   DroppableProvided,
   DroppableStateSnapshot,
   DraggableProvided,
   DraggableStateSnapshot,
-} from '@websiddu/dnd';
+} from '@gsid/dnd';
 import QuoteItem from '../primatives/quote-item';
 import Title from '../primatives/title';
 import { grid } from '../constants';

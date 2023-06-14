@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  DropResult,
-} from '@websiddu/dnd';
+import { DragDropContext, Droppable, Draggable, DropResult } from '@gsid/dnd';
 
 // fake data generator
 const getItems = (count: number) =>

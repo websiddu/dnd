@@ -5,8 +5,8 @@ import type {
   PreDragActions,
   SnapDragActions,
   SensorAPI,
-} from '@websiddu/dnd';
-import { DragDropContext } from '@websiddu/dnd';
+} from '@gsid/dnd';
+import { DragDropContext } from '@gsid/dnd';
 import type { Quote } from '../types';
 import QuoteList from '../primatives/quote-list';
 import reorder from '../reorder';

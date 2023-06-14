@@ -11,7 +11,7 @@ The public Sensor API is the same API that our [mouse](/docs/sensors/mouse.md), 
 
 ## Examples
 
-⚠️ These following examples are based on [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) and might not work with future version of [@websiddu/dnd](https://github.com/websiddu/dnd).
+⚠️ These following examples are based on [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) and might not work with future version of [@gsid/dnd](https://github.com/websiddu/dnd).
 
 These are some examples to show off what is possible with the Sensor API. They are currently not built to be production ready. Feel free to reach out if you would like to help improve them or add your own!
 
@@ -142,7 +142,8 @@ interface DraggableOptions {
 ```ts
 type TryGetLock = (
   draggableId: DraggableId,
-  forceStop?: () => void, options?: TryGetLockOptions,
+  forceStop?: () => void,
+  options?: TryGetLockOptions,
 ) => PreDragActions | null;
 ```
 

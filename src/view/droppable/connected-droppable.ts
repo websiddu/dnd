@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import memoizeOne from 'memoize-one';
 import { FunctionComponent } from 'react';
-import { invariant } from '../../invariant';
 import type {
   State,
   DroppableId,
@@ -18,7 +17,6 @@ import type {
   MapProps,
   InternalOwnProps,
   DroppableProps,
-  DefaultProps,
   Selector,
   DispatchProps,
   DroppableStateSnapshot,

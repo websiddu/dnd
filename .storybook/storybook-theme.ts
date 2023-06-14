@@ -4,10 +4,10 @@ import logo from './compressed-logo-rfd.svg';
 const brandTitle = `
   <span
     style="display:flex;align-items:center"
-    title="@websiddu/dnd"
+    title="@gsid/dnd"
   >
     <img
-      alt="Logo of @websiddu/dnd"
+      alt="Logo of @gsid/dnd"
       src="${logo}"
       style="display:block;width:auto;height:42px;max-width:100%"
     />

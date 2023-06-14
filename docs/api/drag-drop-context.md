@@ -48,7 +48,7 @@ interface Props extends Responders {
 
 ```js
 import React from 'react';
-import { DragDropContext } from '@websiddu/dnd';
+import { DragDropContext } from '@gsid/dnd';
 
 class App extends React.Component {
   onBeforeCapture = () => {
@@ -89,7 +89,7 @@ class App extends React.Component {
 
 ```js
 import React from 'react';
-import { DragDropContext } from '@websiddu/dnd';
+import { DragDropContext } from '@gsid/dnd';
 
 function App() {
   // using useCallback is optional

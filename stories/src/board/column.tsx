@@ -1,11 +1,8 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { Draggable } from '@websiddu/dnd';
-import type {
-  DraggableProvided,
-  DraggableStateSnapshot,
-} from '@websiddu/dnd';
+import { Draggable } from '@gsid/dnd';
+import type { DraggableProvided, DraggableStateSnapshot } from '@gsid/dnd';
 import { grid, borderRadius } from '../constants';
 import QuoteList from '../primatives/quote-list';
 import Title from '../primatives/title';

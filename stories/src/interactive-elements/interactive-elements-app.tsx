@@ -2,12 +2,12 @@ import React, { ReactElement } from 'react';
 import type { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import { DragDropContext, Droppable, Draggable } from '@websiddu/dnd';
+import { DragDropContext, Droppable, Draggable } from '@gsid/dnd';
 import type {
   DropResult,
   DroppableProvided,
   DraggableProvided,
-} from '@websiddu/dnd';
+} from '@gsid/dnd';
 import { grid } from '../constants';
 import reorder from '../reorder';
 

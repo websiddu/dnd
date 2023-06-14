@@ -1,4 +1,4 @@
-import type { DraggableLocation } from '@websiddu/dnd';
+import type { DraggableLocation } from '@gsid/dnd';
 import type { Column, ColumnMap, Entities } from './types';
 import type { Id } from '../types';
 import { invariant } from '../../../src/invariant';

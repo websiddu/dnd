@@ -6,8 +6,8 @@ import type {
   DropResult,
   DraggableLocation,
   DroppableProvided,
-} from '@websiddu/dnd';
-import { DragDropContext, Droppable } from '@websiddu/dnd';
+} from '@gsid/dnd';
+import { DragDropContext, Droppable } from '@gsid/dnd';
 import type { QuoteMap, Quote } from '../types';
 import Column from './column';
 import reorder, { reorderQuoteMap } from '../reorder';

@@ -1,10 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '@atlaskit/theme';
-import type {
-  DraggableProvided,
-  DraggableStateSnapshot,
-} from '@websiddu/dnd';
+import type { DraggableProvided, DraggableStateSnapshot } from '@gsid/dnd';
 import { grid } from '../constants';
 import type { Author } from '../types';
 

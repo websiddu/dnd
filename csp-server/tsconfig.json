@@ -4,7 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@websiddu/dnd": ["../src/index.ts"]
+      "@gsid/dnd": ["../src/index.ts"]
     }
   }
 }
