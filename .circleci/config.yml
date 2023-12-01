@@ -1,17 +1,14 @@
 version: 2.1
 
 orbs:
-  browser-tools: circleci/browser-tools@1.4.1
+  browser-tools: circleci/browser-tools@1.4.6
 
 commands:
-  # TODO: Find a better to setup pnpm. We could use
-  #       an image which have pnpm alreay setup on it.
-  #       See: https://github.com/CircleCI-Public/cimg-node/issues/216
   pnpm:
     steps:
       - run:
           name: Install pnpm
-          command: curl -f https://get.pnpm.io/v6.js | sudo node - add --global pnpm
+          command: sudo corepack enable
 
       - run:
           name: Setup pnpm store path
@@ -20,7 +17,7 @@ commands:
 jobs:
   install:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     environment:
       - CYPRESS_CACHE_FOLDER: '~/repo/node_modules/.cache/Cypress'
@@ -32,9 +29,9 @@ jobs:
       - restore_cache:
           keys:
             # Restore cached node_modules
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
             # fallback to using the latest cache if no exact match is found
-            - v16-dependencies-
+            - v17-dependencies-
 
       - run:
           name: Install Dependencies
@@ -45,11 +42,11 @@ jobs:
           paths:
             - .pnpm-store
             - node_modules
-          key: v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+          key: v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
   validate:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     steps:
       - checkout
@@ -57,7 +54,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: Lint + Typecheck
@@ -65,7 +62,7 @@ jobs:
 
   test-unit:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     resource_class: medium+
     parameters:
@@ -77,7 +74,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: Jest Suite
@@ -91,7 +88,7 @@ jobs:
 
   test-bundle:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     steps:
       - checkout
@@ -99,7 +96,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: Check Bundle Size
@@ -107,7 +104,7 @@ jobs:
 
   build:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     steps:
       - checkout
@@ -115,7 +112,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: Build asset
@@ -128,12 +125,14 @@ jobs:
 
   test-browser:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     environment:
       - CYPRESS_CACHE_FOLDER: '~/repo/node_modules/.cache/Cypress'
     steps:
-      - browser-tools/install-chrome
+      # TODO: remove fixed version once this issue is fixed: https://github.com/CircleCI-Public/browser-tools-orb/issues/90
+      - browser-tools/install-browser-tools:
+          chrome-version: 116.0.5845.96
       - browser-tools/install-chromedriver
       - checkout
       - pnpm
@@ -143,7 +142,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: 'Run cypress'
@@ -157,10 +156,12 @@ jobs:
 
   test-a11y:
     docker:
-      - image: cimg/node:16.17.0-browsers
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/repo
     steps:
-      - browser-tools/install-chrome
+      # TODO: remove fixed version once this issue is fixed: https://github.com/CircleCI-Public/browser-tools-orb/issues/90
+      - browser-tools/install-browser-tools:
+          chrome-version: 116.0.5845.96
       - browser-tools/install-chromedriver
       - checkout
       - pnpm
@@ -170,7 +171,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v16-dependencies-{{ checksum "pnpm-lock.yaml" }}
+            - v17-dependencies-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: Accessibility Audit
