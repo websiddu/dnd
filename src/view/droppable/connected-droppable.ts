@@ -22,6 +22,7 @@ import type {
   DroppableStateSnapshot,
   UseClone,
   DraggableChildrenFn,
+  // DefaultProps,
 } from './droppable-types';
 import Droppable from './droppable';
 import isStrictEqual from '../is-strict-equal';
@@ -30,6 +31,7 @@ import { updateViewportMaxScroll as updateViewportMaxScrollAction } from '../../
 import isDragging from '../../state/is-dragging';
 import StoreContext from '../context/store-context';
 import whatIsDraggedOverFromResult from '../../state/droppable/what-is-dragged-over-from-result';
+// import { invariant } from '../../invariant';
 
 const isMatchingType = (type: TypeId, critical: Critical): boolean =>
   type === critical.droppable.type;
@@ -137,8 +139,10 @@ export const makeMapStateToProps = (): Selector => {
     // not checking if item is disabled as we need the home list to display a placeholder
 
     const id: DroppableId = ownProps.droppableId;
-    const type: TypeId = ownProps.type;
-    const isEnabled = !ownProps.isDropDisabled;
+    const type: TypeId =
+      ownProps.type === undefined ? 'DEFAULT' : ownProps.type;
+    const isEnabled =
+      ownProps.isDropDisabled === undefined ? !ownProps.isDropDisabled : true;
     const renderClone: DraggableChildrenFn | null = ownProps.renderClone;
 
     if (isDragging(state)) {
@@ -255,6 +259,22 @@ const ConnectedDroppable = connect(
   },
   // FIXME: Typings are really complexe
 )(Droppable) as unknown as FunctionComponent<DroppableProps>;
+
+// function getBody(): HTMLElement {
+//   invariant(document.body, 'document.body is not ready');
+//   return document.body;
+// }
+
+// const defaultProps: DefaultProps = {
+//   mode: 'standard',
+//   type: 'DEFAULT',
+//   direction: 'vertical',
+//   isDropDisabled: false,
+//   isCombineEnabled: false,
+//   ignoreContainerClipping: false,
+//   renderClone: null,
+//   getContainerForClone: getBody,
+// };
 
 // ConnectedDroppable.defaultProps = defaultProps;
 

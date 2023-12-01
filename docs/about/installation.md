@@ -62,6 +62,7 @@ You can use the UMD to run `@gsid/dnd` directly in the browser.
 
   // You can use JSX if your environment supports it
   ReactDOM.render(React.createElement(App), document.getElementById('app'));
+  createRoot();
 </script>
 ```
 

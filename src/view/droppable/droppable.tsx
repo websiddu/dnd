@@ -184,7 +184,7 @@ const Droppable: FunctionComponent<Props> = (props) => {
       </PrivateDraggable>
     );
 
-    return ReactDOM.createPortal(node, getContainerForClone());
+    return ReactDOM.createPortal(node, getContainerForClone()) as ReactNode;
   }
 
   return (
